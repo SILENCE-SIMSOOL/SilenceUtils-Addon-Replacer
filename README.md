@@ -6,4 +6,4 @@ Additionally, it eliminates the delay that occurs before breaking blocks, provid
 
 # Requirements
 This mod is an addon for the SilenceUtils mod.
-You need version 1.4.3 or higher of the SilenceUtils mod to use this mod.
+You need version 1.4.2 or higher of the SilenceUtils mod to use this mod.
