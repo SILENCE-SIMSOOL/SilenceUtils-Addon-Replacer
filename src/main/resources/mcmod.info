@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "${modid}",
+    "name": "SU Addon (Replacer)",
+    "description": "Fix replace drill when mining in skyblock.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "SimSool"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
