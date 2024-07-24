@@ -10,4 +10,7 @@ Additionally, it eliminates the delay that occurs before breaking blocks, provid
 This mod is an addon for the SilenceUtils mod.
 You need version 1.4.2 or higher of the SilenceUtils mod to use this mod.
 
+# How to Download
+You can [Download](https://github.com/SILENCE-SIMSOOL/SilenceUtils-Addon-Replacer/releases/latest) Here.
+
 This mod was inspired by and created with reference to the [Hot-Shirtless-Men](https://github.com/Rekteiru/Hot-Shirtless-Men)
