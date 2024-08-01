@@ -6,7 +6,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
@@ -28,6 +27,6 @@ public class MixinPlayerControllerMP {
 
 	@Inject(method = "onPlayerDamageBlock", at = @At("HEAD"))
 	private void tweakHitDelay(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-		if (Config.Replacer) this.blockHitDelay = 0;
+		if (Config.Replacer && !Config.HitDelayFix && MiningManager.isSkyblockMining() && MiningManager.inMiningIsland()) this.blockHitDelay = 0;
 	}
 }
