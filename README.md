@@ -2,6 +2,12 @@
 
 Select Language: [한국어](https://github.com/SILENCE-SIMSOOL/SilenceUtils-Addon-Replacer/blob/main/Korean.md)
 
+# ⚠ Notice
+This mod is no longer used in Mod Silence Utils.  
+It has been merged with Silence Utils.  
+The code is left here for those who are interested.  
+In SilenceUtils, the problem has been solved in a completely different way.  
+
 # What is mod?
 This mod helps high ping players in Hypixel SkyBlock by updating the held item when breaking blocks, alleviating the disadvantages they face.
 Additionally, it eliminates the delay that occurs before breaking blocks, providing a better experience.
