@@ -14,6 +14,34 @@
 이 모드는 사일런스 유틸 모드의 애드온 모드입니다.
 1.4.2 이상의 사일런스 유틸 모드가 있어야 하며 사일런스 유틸에서 해당 모드가 제어가 가능합니다.
 
+## Vanilla Code
+```java
+private boolean isHittingPosition(BlockPos pos)
+{
+    ItemStack itemstack = this.mc.thePlayer.getHeldItem();
+    boolean flag = this.currentItemHittingBlock == null && itemstack == null;
+    if (this.currentItemHittingBlock != null && itemstack != null)
+    {
+        flag = itemstack.getItem() == this.currentItemHittingBlock.getItem() && ItemStack.areItemStackTagsEqual(itemstack, this.currentItemHittingBlock) && (itemstack.isItemStackDamageable() || itemstack.getMetadata() == this.currentItemHittingBlock.getMetadata());
+    }
+    return pos.equals(this.currentBlock) && flag;
+}
+```
+
+## Replacer Code
+```java
+public static boolean isNewHittingPosition(BlockPos pos, ItemStack item, BlockPos currentPos) {
+    ItemStack itemstack = mc.thePlayer.getHeldItem(); if (itemstack == null) return false;
+    String iName = itemstack.getDisplayName();
+    boolean flag = item == null && itemstack == null;
+    if (item != null && itemstack != null) {
+        if (Main.isEnable() && (iName.contains("Drill") || iName.contains("Gemstone Gauntlet") || iName.contains("Pickonimbus"))) return pos.equals(currentPos);
+        flag = itemstack.getItem() == item.getItem() && ItemStack.areItemStackTagsEqual(itemstack, item) && ( itemstack.isItemStackDamageable() || itemstack.getMetadata() == item.getMetadata() );
+    }
+    return pos.equals(currentPos) && flag;
+}
+```
+
 # How to Download
 여기서 [다운로드](https://github.com/SILENCE-SIMSOOL/SilenceUtils-Addon-Replacer/releases/download/2.1/SUAddon_Replacer-2.1.jar) 하실 수 있습니다.
 
