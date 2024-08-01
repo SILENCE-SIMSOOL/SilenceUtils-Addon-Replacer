@@ -10,8 +10,8 @@ import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import silence.simsool.config.Config;
 import sua.simsool.replacer.HittingPosition;
+import sua.simsool.replacer.Main;
 
 @Mixin(PlayerControllerMP.class)
 public class MixinPlayerControllerMP {
@@ -22,11 +22,12 @@ public class MixinPlayerControllerMP {
 
 	@Overwrite
 	private boolean isHittingPosition(BlockPos pos) {
-		return HittingPosition.isHittingPosition(pos, currentItemHittingBlock, currentBlock);
+		return HittingPosition.isNewHittingPosition(pos, currentItemHittingBlock, currentBlock);
 	}
 
 	@Inject(method = "onPlayerDamageBlock", at = @At("HEAD"))
 	private void tweakHitDelay(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-		if (Config.Replacer && !Config.HitDelayFix && MiningManager.isSkyblockMining() && MiningManager.inMiningIsland()) this.blockHitDelay = 0;
+		if (Main.isEnable()) this.blockHitDelay = 0;
 	}
+
 }
