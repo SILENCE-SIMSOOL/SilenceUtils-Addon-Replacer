@@ -3,8 +3,7 @@
 Select Language: [한국어](https://github.com/SILENCE-SIMSOOL/SilenceUtils-Addon-Replacer/blob/main/Korean.md)
 
 # ⚠ Do not use this!
-This mod is no longer used in Mod Silence Utils.  
-It has been merged with Silence Utils.  
+This mod is no longer used in Mod Silence Utils. It has been merged with Silence Utils.  
 The code is left here for those who are interested.  
 In SilenceUtils, the problem has been solved in a completely different way.  
 
