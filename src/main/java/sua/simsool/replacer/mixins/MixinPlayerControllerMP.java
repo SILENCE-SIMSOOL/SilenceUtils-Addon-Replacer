@@ -10,8 +10,8 @@ import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import silence.simsool.config.Config;
 import sua.simsool.replacer.HittingPosition;
-import sua.simsool.replacer.Main;
 
 @Mixin(PlayerControllerMP.class)
 public class MixinPlayerControllerMP {
@@ -27,7 +27,7 @@ public class MixinPlayerControllerMP {
 
 	@Inject(method = "onPlayerDamageBlock", at = @At("HEAD"))
 	private void tweakHitDelay(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-		if (Main.isEnable()) this.blockHitDelay = 0;
+		if (Config.Replacer) this.blockHitDelay = 0;
 	}
 
 }
